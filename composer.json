@@ -1,11 +1,11 @@
 {
-    "name": "sfneal/php-package-boilerplate",
-    "description": "Boilerplate for PHP package repo's",
+    "name": "sfneal/casts",
+    "description": "An alternative implementation of the Eloquent Model accessors & mutators pattern for type casting attributes",
     "keywords": [
         "sfneal",
-        "php-package-boilerplate"
+        "casts"
     ],
-    "homepage": "https://github.com/sfneal/php-package-boilerplate",
+    "homepage": "https://github.com/sfneal/casts",
     "license": "MIT",
     "type": "library",
     "authors": [
