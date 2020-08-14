@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Sfneal\Casts;
 
 use Carbon\Carbon;
@@ -10,7 +9,7 @@ use Vkovic\LaravelCustomCasts\CustomCastBase;
 class CarbonCast extends CustomCastBase
 {
     /**
-     * Store value as time code string
+     * Store value as time code string.
      *
      * @param string $value
      * @return string
@@ -21,7 +20,7 @@ class CarbonCast extends CustomCastBase
     }
 
     /**
-     * Retrieve value as Carbon instance
+     * Retrieve value as Carbon instance.
      *
      * @param string $value
      * @return Carbon
@@ -29,6 +28,6 @@ class CarbonCast extends CustomCastBase
      */
     public function castAttribute($value)
     {
-        return (new Carbon($value));
+        return new Carbon($value);
     }
 }
