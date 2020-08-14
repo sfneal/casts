@@ -16,19 +16,22 @@
         }
     ],
     "require": {
-        "php": "^7.1"
+        "php": "^7.1",
+        "ext-json": "*",
+        "nesbot/carbon": "^2.38",
+        "vkovic/laravel-custom-casts": "^1.3"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.0"
     },
     "autoload": {
         "psr-4": {
-            "Sfneal\\PhpPackageBoilerplate\\": "src"
+            "Sfneal\\Casts\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Sfneal\\PhpPackageBoilerplate\\Tests\\": "tests"
+            "Sfneal\\Casts\\Tests\\": "tests"
         }
     },
     "scripts": {
