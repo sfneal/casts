@@ -9,3 +9,7 @@ All notable changes to `casts` will be documented in this file
 ## 0.2.0 - 2020-10-07
 - add support for php 7.0 & 7.1
 - fix vkovic/laravel-custom-casts version requirement
+
+
+## 0.2.1 - 2020-10-07
+- decrease nesbot/carbon min version to 1.0
