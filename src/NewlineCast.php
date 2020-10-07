@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Sfneal\Casts;
 
 use Vkovic\LaravelCustomCasts\CustomCastBase;
@@ -8,7 +7,7 @@ use Vkovic\LaravelCustomCasts\CustomCastBase;
 class NewlineCast extends CustomCastBase
 {
     /**
-     * Transcode newline characters as html <br> chars
+     * Transcode newline characters as html <br> chars.
      *
      * @param string $value
      * @return string
@@ -19,13 +18,13 @@ class NewlineCast extends CustomCastBase
     }
 
     /**
-     * Transcode newline characters as html <br> chars
+     * Transcode newline characters as html <br> chars.
      *
      * @param string $value
      * @return string
      */
     public function castAttribute($value)
     {
-        return !empty($value) ? nl2br($value) : null;
+        return ! empty($value) ? nl2br($value) : null;
     }
 }
