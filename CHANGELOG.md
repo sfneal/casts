@@ -17,3 +17,7 @@ All notable changes to `casts` will be documented in this file
 
 ## 0.2.2 - 2020-11-30
 - fix phpunit min version
+
+
+## 0.3.0 - 2020-11-30
+- replace sfneal/laravel-custom-casts dependency with sfneal/laravel-custom-casts
