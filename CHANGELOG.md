@@ -25,3 +25,7 @@ All notable changes to `casts` will be documented in this file
 
 ## 0.3.1 - 2020-11-30
 - bump sfneal/laravel-custom-casts min version
+
+
+## 0.3.2 - 2020-11-30
+- fix use of namespaces
