@@ -2,7 +2,7 @@
 
 namespace Sfneal\Casts;
 
-use Vkovic\LaravelCustomCasts\CustomCastBase;
+use Sfneal\LaravelCustomCasts\CustomCastBase;
 
 class NullableIntArrayCast extends CustomCastBase
 {
