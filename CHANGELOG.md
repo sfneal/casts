@@ -13,3 +13,7 @@ All notable changes to `casts` will be documented in this file
 
 ## 0.2.1 - 2020-10-07
 - decrease nesbot/carbon min version to 1.0
+
+
+## 0.2.2 - 2020-11-30
+- fix phpunit min version
