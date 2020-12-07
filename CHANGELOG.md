@@ -29,3 +29,7 @@ All notable changes to `casts` will be documented in this file
 
 ## 0.3.2 - 2020-11-30
 - fix use of namespaces
+
+
+## 0.4.0 - 2020-12-07
+- cut support for php7.0
