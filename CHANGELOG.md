@@ -46,3 +46,5 @@ All notable changes to `casts` will be documented in this file
 ## 1.0.0 - 2021-02-01
 - initial production release
 - add improved type hinting to Cast classes
+- fix issues with return type hinting not being nullable in Cast classes
+- add CastsAreNullableTest for testing that each 'castable' attribute can be set to null.
