@@ -33,3 +33,11 @@ All notable changes to `casts` will be documented in this file
 
 ## 0.4.0 - 2020-12-07
 - cut support for php7.0
+
+
+## 0.5.0 - 2021-02-01
+- add test suite from sfneal/builders
+- add orchestra/testbench to dev requirements
+- add use of Casts to People test model, Factory & migration
+- add individual tests for each Cast class
+- cut support 
