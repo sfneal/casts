@@ -47,4 +47,5 @@ All notable changes to `casts` will be documented in this file
 - initial production release
 - add improved type hinting to Cast classes
 - fix issues with return type hinting not being nullable in Cast classes
-- add CastsAreNullableTest for testing that each 'castable' attribute can be set to null.
+- add CastsAreNullableTest for testing that each 'castable' attribute can be set to null
+- update documentation
