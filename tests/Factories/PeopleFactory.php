@@ -18,6 +18,7 @@ class PeopleFactory extends Factory
      * Define the model's default state.
      *
      * @return array
+     * @throws \Exception
      */
     public function definition(): array
     {
@@ -25,11 +26,12 @@ class PeopleFactory extends Factory
             'name_first' => $this->faker->firstName,
             'name_last' => $this->faker->lastName,
             'email' => $this->faker->safeEmail,
-            'age' => $this->faker->numberBetween(21, 70),
-            'address' => $this->faker->streetAddress,
-            'city' => $this->faker->city,
-            'state' => $this->faker->state,
-            'zip' => $this->faker->postcode,
+            'birthday' => $this->faker->dateTime,
+            'bio' => $this->faker->paragraphs(3, true),
+            'favorites' => $this->faker->randomElements(
+                range(1, 6),
+                random_int(0, 4)
+            ),
         ];
     }
 }

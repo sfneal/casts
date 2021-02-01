@@ -2,12 +2,18 @@
 
 namespace Sfneal\Casts\Tests\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Sfneal\Casts\CarbonCast;
+use Sfneal\Casts\NewlineCast;
+use Sfneal\Casts\NullableIntArrayCast;
 use Sfneal\Casts\Tests\Factories\PeopleFactory;
+use Sfneal\LaravelCustomCasts\HasCustomCasts;
 
 class People extends Model
 {
+    use HasCustomCasts;
     use HasFactory;
 
     /**
@@ -25,11 +31,18 @@ class People extends Model
         'name_first',
         'name_last',
         'email',
-        'age',
-        'address',
-        'city',
-        'state',
-        'zip',
+        'birthday',
+        'bio',
+        'favorites',
+    ];
+
+    /**
+     * @var array Attributes that should be type cast
+     */
+    protected $casts = [
+        'birthday' => CarbonCast::class,
+        'bio' => NewlineCast::class,
+        'favorites' => NullableIntArrayCast::class,
     ];
 
     /**
@@ -52,13 +65,10 @@ class People extends Model
         return "{$this->name_last}, {$this->name_first}";
     }
 
-    public function getAddressFullAttribute(): string
+    public function getAgeAttribute(): int
     {
-        return "{$this->address}, {$this->city}, {$this->state} {$this->zip}";
-    }
-
-    public function getAgeAttribute($value): int
-    {
-        return intval($value);
+        return $this->birthday
+            ->diff(Carbon::now())
+            ->format('%y');
     }
 }
