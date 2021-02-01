@@ -23,7 +23,7 @@ class CarbonCastTest extends TestCase
         $this->model = $this->models->random();
 
         $this->model->update([
-            'birthday' => \DateTime::createFromFormat('m-d-Y', '11-27-1995')
+            'birthday' => \DateTime::createFromFormat('m-d-Y', '11-27-1995'),
         ]);
     }
 

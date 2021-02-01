@@ -26,7 +26,7 @@ class NullableIntArrayCastTest extends TestCase
     public function attribute_is_mutated_correctly()
     {
         $this->model->update([
-            'favorites' => [1, 2, 3]
+            'favorites' => [1, 2, 3],
         ]);
 
         $this->assertEquals(
@@ -39,7 +39,7 @@ class NullableIntArrayCastTest extends TestCase
     public function attribute_is_accessed_correctly()
     {
         $this->model->update([
-            'favorites' => []
+            'favorites' => [],
         ]);
 
         $this->assertEquals(
