@@ -19,8 +19,42 @@ composer require sfneal/casts
 
 ## Usage
 
+In order to make use of the attribute type Casts add the `HasCustomCasts` trait to your model before definition attributes that should be cast to custom types.
+
 ``` php
-// Usage description here
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
+use Sfneal\Casts\CarbonCast;
+use Sfneal\Casts\NewlineCast;
+use Sfneal\Casts\NullableIntArrayCast;
+use Sfneal\LaravelCustomCasts\HasCustomCasts;
+
+class People extends Model
+{
+    use HasCustomCasts;
+
+    protected $table = 'people';
+    protected $primaryKey = 'person_id';
+
+    protected $fillable = [
+        'person_id',
+        'name_first',
+        'name_last',
+        'email',
+        'birthday',
+        'bio',
+        'favorites',
+    ];
+
+    /**
+     * @var array Attributes that should be type cast
+     */
+    protected $casts = [
+        'birthday' => CarbonCast::class,
+        'bio' => NewlineCast::class,
+        'favorites' => NullableIntArrayCast::class,
+    ];
+}
 ```
 
 ### Testing
