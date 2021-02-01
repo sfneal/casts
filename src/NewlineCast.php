@@ -12,7 +12,7 @@ class NewlineCast extends CustomCastBase
      * @param mixed $value
      * @return string
      */
-    public function setAttribute($value): string
+    public function setAttribute($value): ?string
     {
         return $value;
     }

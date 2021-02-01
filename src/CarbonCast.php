@@ -15,7 +15,7 @@ class CarbonCast extends CustomCastBase
      * @param mixed $value
      * @return DateTime
      */
-    public function setAttribute($value): DateTime
+    public function setAttribute($value): ?DateTime
     {
         return $value;
     }
@@ -29,6 +29,6 @@ class CarbonCast extends CustomCastBase
      */
     public function castAttribute($value): ?Carbon
     {
-        return new Carbon($value);
+        return !is_null($value) ? new Carbon($value) : null;
     }
 }
