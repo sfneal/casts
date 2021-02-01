@@ -3,6 +3,7 @@
 namespace Sfneal\Casts;
 
 use Carbon\Carbon;
+use DateTime;
 use Exception;
 use Sfneal\LaravelCustomCasts\CustomCastBase;
 
@@ -11,10 +12,10 @@ class CarbonCast extends CustomCastBase
     /**
      * Store value as time code string.
      *
-     * @param string $value
-     * @return string
+     * @param mixed $value
+     * @return DateTime
      */
-    public function setAttribute($value)
+    public function setAttribute($value): DateTime
     {
         return $value;
     }
@@ -22,11 +23,11 @@ class CarbonCast extends CustomCastBase
     /**
      * Retrieve value as Carbon instance.
      *
-     * @param string $value
+     * @param mixed $value
      * @return Carbon
      * @throws Exception
      */
-    public function castAttribute($value)
+    public function castAttribute($value): ?Carbon
     {
         return new Carbon($value);
     }

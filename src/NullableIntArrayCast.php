@@ -14,7 +14,7 @@ class NullableIntArrayCast extends CustomCastBase
      * @param $value
      * @return string
      */
-    public function setAttribute($value)
+    public function setAttribute($value): ?string
     {
         return ! is_null($value) ? json_encode(array_map('intval', $value)) : null;
     }
@@ -23,9 +23,9 @@ class NullableIntArrayCast extends CustomCastBase
      * Retrieve an array of values.
      *
      * @param $value
-     * @return string
+     * @return array
      */
-    public function castAttribute($value)
+    public function castAttribute($value): array
     {
         return json_decode($value, true);
     }
