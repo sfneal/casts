@@ -22,7 +22,7 @@ class NewlineCastTest extends TestCase
         $this->model = $this->models->random();
 
         $this->model->update([
-            'bio' => MigrationTest::getBio()
+            'bio' => MigrationTest::getBio(),
         ]);
     }
 
