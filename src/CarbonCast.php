@@ -29,6 +29,6 @@ class CarbonCast extends CustomCastBase
      */
     public function castAttribute($value): ?Carbon
     {
-        return !is_null($value) ? new Carbon($value) : null;
+        return ! is_null($value) ? new Carbon($value) : null;
     }
 }
