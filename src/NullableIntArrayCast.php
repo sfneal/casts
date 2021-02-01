@@ -7,7 +7,9 @@ use Sfneal\LaravelCustomCasts\CustomCastBase;
 class NullableIntArrayCast extends CustomCastBase
 {
     /**
-     * json_decode the $value.
+     * Cast the $value as an array of integer values.
+     *
+     *  - set to null if an empty array or null value is passed
      *
      * @param $value
      * @return string
@@ -18,7 +20,7 @@ class NullableIntArrayCast extends CustomCastBase
     }
 
     /**
-     * json_encode the $value or return null.
+     * Retrieve an array of values.
      *
      * @param $value
      * @return string
