@@ -40,4 +40,4 @@ All notable changes to `casts` will be documented in this file
 - add orchestra/testbench to dev requirements
 - add use of Casts to People test model, Factory & migration
 - add individual tests for each Cast class
-- cut support 
+- cut support for php7.2 & below
