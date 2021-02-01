@@ -7,7 +7,7 @@ use Sfneal\Casts\Tests\Models\People;
 
 class MigrationTest extends TestCase
 {
-    private static function getBio(): string
+    public static function getBio(): string
     {
         return "
             When a suburban Boston couple decided to tear down their existing home and build a replacement on the same
