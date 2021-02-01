@@ -3,7 +3,8 @@
 [![Packagist PHP support](https://img.shields.io/packagist/php-v/sfneal/casts)](https://packagist.org/packages/sfneal/casts)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sfneal/casts.svg?style=flat-square)](https://packagist.org/packages/sfneal/casts)
 [![Build Status](https://travis-ci.com/sfneal/casts.svg?branch=master&style=flat-square)](https://travis-ci.com/sfneal/casts)
-[![Quality Score](https://img.shields.io/scrutinizer/g/sfneal/casts.svg?style=flat-square)](https://scrutinizer-ci.com/g/sfneal/casts)
+[![StyleCI](https://github.styleci.io/repos/287554375/shield?branch=master)](https://github.styleci.io/repos/287554375?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sfneal/casts/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/sfneal/casts/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/sfneal/casts.svg?style=flat-square)](https://packagist.org/packages/sfneal/casts)
 
 An alternative implementation of the Eloquent Model accessors & mutators pattern for type casting attributes
