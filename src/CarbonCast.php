@@ -5,7 +5,7 @@ namespace Sfneal\Casts;
 use Carbon\Carbon;
 use DateTime;
 use Exception;
-use Sfneal\LaravelCustomCasts\CustomCastBase;
+use Vkovic\LaravelCustomCasts\CustomCastBase;
 
 class CarbonCast extends CustomCastBase
 {

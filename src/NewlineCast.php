@@ -2,7 +2,7 @@
 
 namespace Sfneal\Casts;
 
-use Sfneal\LaravelCustomCasts\CustomCastBase;
+use Vkovic\LaravelCustomCasts\CustomCastBase;
 
 class NewlineCast extends CustomCastBase
 {
