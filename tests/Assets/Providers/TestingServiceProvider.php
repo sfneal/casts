@@ -6,6 +6,11 @@ use Illuminate\Support\ServiceProvider;
 
 class TestingServiceProvider extends ServiceProvider
 {
+    /**
+     * Bootstrap any MockModel services.
+     *
+     * @return void
+     */
     public function boot()
     {
         // Publish migration file (if not already published)
