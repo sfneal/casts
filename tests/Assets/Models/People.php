@@ -1,12 +1,12 @@
 <?php
 
-namespace Sfneal\Casts\Tests\Models;
+namespace Sfneal\Casts\Tests\Assets\Models;
 
 use Carbon\Carbon;
 use Sfneal\Casts\CarbonCast;
 use Sfneal\Casts\NewlineCast;
 use Sfneal\Casts\NullableIntArrayCast;
-use Sfneal\Casts\Tests\Factories\PeopleFactory;
+use Sfneal\Casts\Tests\Assets\Factories\PeopleFactory;
 use Vkovic\LaravelCustomCasts\HasCustomCasts;
 
 class People extends \Sfneal\Testing\Models\People
