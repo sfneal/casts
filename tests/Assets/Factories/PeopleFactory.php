@@ -1,11 +1,10 @@
 <?php
 
-namespace Sfneal\Casts\Tests\Factories;
+namespace Sfneal\Casts\Tests\Assets\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Sfneal\Casts\Tests\Models\People;
+use Sfneal\Casts\Tests\Assets\Models\People;
 
-class PeopleFactory extends Factory
+class PeopleFactory extends \Database\Factories\PeopleFactory
 {
     /**
      * The name of the factory's corresponding model.

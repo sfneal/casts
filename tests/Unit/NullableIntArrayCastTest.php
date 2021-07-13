@@ -1,11 +1,11 @@
 <?php
 
-namespace Sfneal\Casts\Tests;
+namespace Sfneal\Casts\Tests\Unit;
 
-use Carbon\Carbon;
 use Sfneal\Casts\Tests\Models\People;
+use Sfneal\Casts\Tests\TestCase;
 
-class CarbonCastTest extends TestCase
+class NullableIntArrayCastTest extends TestCase
 {
     /**
      * @var People
@@ -21,27 +21,31 @@ class CarbonCastTest extends TestCase
     {
         parent::setUp();
         $this->model = $this->models->random();
-
-        $this->model->update([
-            'birthday' => \DateTime::createFromFormat('m-d-Y', '11-27-1995'),
-        ]);
     }
 
     /** @test */
     public function attribute_is_mutated_correctly()
     {
+        $this->model->update([
+            'favorites' => [1, 2, 3],
+        ]);
+
         $this->assertEquals(
-            $this->model->getRawOriginal('birthday'),
-            (new Carbon(\DateTime::createFromFormat('m-d-Y', '11-27-1995')))->toDate()
+            [1, 2, 3],
+            $this->model->favorites
         );
     }
 
     /** @test */
     public function attribute_is_accessed_correctly()
     {
+        $this->model->update([
+            'favorites' => [],
+        ]);
+
         $this->assertEquals(
-            '11-27-1995',
-            $this->model->birthday->format('m-d-Y')
+            [],
+            $this->model->favorites
         );
     }
 }

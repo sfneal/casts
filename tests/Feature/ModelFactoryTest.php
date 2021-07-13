@@ -1,9 +1,10 @@
 <?php
 
-namespace Sfneal\Casts\Tests;
+namespace Sfneal\Casts\Tests\Feature;
 
 use Carbon\Carbon;
 use Sfneal\Casts\Tests\Models\People;
+use Sfneal\Casts\Tests\TestCase;
 
 class ModelFactoryTest extends TestCase
 {

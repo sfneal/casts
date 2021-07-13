@@ -1,8 +1,9 @@
 <?php
 
-namespace Sfneal\Casts\Tests;
+namespace Sfneal\Casts\Tests\Feature;
 
 use Sfneal\Casts\Tests\Models\People;
+use Sfneal\Casts\Tests\TestCase;
 
 class CastsAreNullableTest extends TestCase
 {

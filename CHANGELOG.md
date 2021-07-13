@@ -57,3 +57,10 @@ All notable changes to `casts` will be documented in this file
 
 ## 1.1.1 - 2021-07-13
 - optimize Travis CI config & enable code coverage uploading
+
+
+## 1.2.0 - 2021-07-13
+- cut support for php7.3
+- refactor test assets into the 'Tests/Assets' namespace
+- add use of sfneal/mock-models for expanding `People` & `PeopleFactory`
+- refactor test classes into `Feature` & `Unit` namespaces

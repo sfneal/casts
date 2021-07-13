@@ -1,10 +1,13 @@
 <?php
 
-namespace Sfneal\Casts\Tests;
+namespace Sfneal\Casts\Tests\Unit;
 
+use Carbon\Carbon;
+use DateTime;
 use Sfneal\Casts\Tests\Models\People;
+use Sfneal\Casts\Tests\TestCase;
 
-class NewlineCastTest extends TestCase
+class CarbonCastTest extends TestCase
 {
     /**
      * @var People
@@ -22,7 +25,7 @@ class NewlineCastTest extends TestCase
         $this->model = $this->models->random();
 
         $this->model->update([
-            'bio' => MigrationTest::getBio(),
+            'birthday' => DateTime::createFromFormat('m-d-Y', '11-27-1995'),
         ]);
     }
 
@@ -30,8 +33,8 @@ class NewlineCastTest extends TestCase
     public function attribute_is_mutated_correctly()
     {
         $this->assertEquals(
-            $this->model->getRawOriginal('bio'),
-            MigrationTest::getBio()
+            $this->model->getRawOriginal('birthday'),
+            (new Carbon(DateTime::createFromFormat('m-d-Y', '11-27-1995')))->toDate()
         );
     }
 
@@ -39,8 +42,8 @@ class NewlineCastTest extends TestCase
     public function attribute_is_accessed_correctly()
     {
         $this->assertEquals(
-            nl2br(MigrationTest::getBio()),
-            $this->model->bio
+            '11-27-1995',
+            $this->model->birthday->format('m-d-Y')
         );
     }
 }
