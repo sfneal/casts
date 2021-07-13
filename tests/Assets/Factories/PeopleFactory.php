@@ -2,7 +2,6 @@
 
 namespace Sfneal\Casts\Tests\Assets\Factories;
 
-
 use Sfneal\Casts\Tests\Assets\Models\People;
 
 class PeopleFactory extends \Database\Factories\PeopleFactory
