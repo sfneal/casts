@@ -3,34 +3,22 @@
 namespace Sfneal\Casts\Tests\Models;
 
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Sfneal\Casts\CarbonCast;
 use Sfneal\Casts\NewlineCast;
 use Sfneal\Casts\NullableIntArrayCast;
 use Sfneal\Casts\Tests\Factories\PeopleFactory;
 use Vkovic\LaravelCustomCasts\HasCustomCasts;
 
-class People extends Model
+class People extends \Sfneal\Testing\Models\People
 {
     use HasCustomCasts;
-    use HasFactory;
-
-    /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
-    protected $dates = ['deleted_at', 'updated_at', 'created_at'];
-
-    protected $table = 'people';
-    protected $primaryKey = 'person_id';
 
     protected $fillable = [
         'person_id',
         'name_first',
         'name_last',
         'email',
+        'age',
         'birthday',
         'bio',
         'favorites',
@@ -55,20 +43,14 @@ class People extends Model
         return new PeopleFactory();
     }
 
-    public function getNameFullAttribute(): string
+    /**
+     * Retrieve the 'age' attribute.
+     *
+     * @param $value
+     * @return int
+     */
+    public function getAgeAttribute($value): int
     {
-        return "{$this->name_first} {$this->name_last}";
-    }
-
-    public function getNameLastFirstAttribute(): string
-    {
-        return "{$this->name_last}, {$this->name_first}";
-    }
-
-    public function getAgeAttribute(): int
-    {
-        return $this->birthday
-            ->diff(Carbon::now())
-            ->format('%y');
+        return $value ?? $this->birthday->diff(Carbon::now())->format('%y');
     }
 }

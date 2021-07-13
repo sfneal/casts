@@ -2,10 +2,9 @@
 
 namespace Sfneal\Casts\Tests\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Sfneal\Casts\Tests\Models\People;
 
-class PeopleFactory extends Factory
+class PeopleFactory extends \Database\Factories\PeopleFactory
 {
     /**
      * The name of the factory's corresponding model.
