@@ -3,6 +3,7 @@
 namespace Sfneal\Casts\Tests;
 
 use Carbon\Carbon;
+use DateTime;
 use Sfneal\Casts\Tests\Models\People;
 
 class CarbonCastTest extends TestCase
@@ -23,7 +24,7 @@ class CarbonCastTest extends TestCase
         $this->model = $this->models->random();
 
         $this->model->update([
-            'birthday' => \DateTime::createFromFormat('m-d-Y', '11-27-1995'),
+            'birthday' => DateTime::createFromFormat('m-d-Y', '11-27-1995'),
         ]);
     }
 
@@ -32,7 +33,7 @@ class CarbonCastTest extends TestCase
     {
         $this->assertEquals(
             $this->model->getRawOriginal('birthday'),
-            (new Carbon(\DateTime::createFromFormat('m-d-Y', '11-27-1995')))->toDate()
+            (new Carbon(DateTime::createFromFormat('m-d-Y', '11-27-1995')))->toDate()
         );
     }
 
