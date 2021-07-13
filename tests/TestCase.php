@@ -3,6 +3,7 @@
 namespace Sfneal\Casts\Tests;
 
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Sfneal\Casts\Tests\Models\People;
@@ -17,11 +18,23 @@ class TestCase extends OrchestraTestCase
      */
     public $models;
 
+    /**
+     * Register package service providers.
+     *
+     * @param Application $app
+     * @return array|string
+     */
     protected function getPackageProviders($app)
     {
         return TestingServiceProvider::class;
     }
 
+    /**
+     * Define environment setup.
+     *
+     * @param Application $app
+     * @return void
+     */
     protected function getEnvironmentSetUp($app)
     {
         include_once __DIR__.'/migrations/create_people_table.php.stub';
