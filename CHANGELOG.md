@@ -53,3 +53,7 @@ All notable changes to `casts` will be documented in this file
 
 ## 1.1.0 - 2021-02-05
 - replaced sfneal/laravel-custom-casts composer requirement with vkovic/laravel-custom-casts because the vkovic package now supports php 8
+
+
+## 1.1.1 - 2021-07-13
+- optimize Travis CI config & enable code coverage uploading
