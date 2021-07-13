@@ -1,10 +1,12 @@
 <?php
 
-namespace Sfneal\Casts\Tests;
+namespace Sfneal\Casts\Tests\Unit;
 
+use Sfneal\Casts\Tests\Feature\MigrationTest;
 use Sfneal\Casts\Tests\Models\People;
+use Sfneal\Casts\Tests\TestCase;
 
-class NullableIntArrayCastTest extends TestCase
+class NewlineCastTest extends TestCase
 {
     /**
      * @var People
@@ -20,31 +22,27 @@ class NullableIntArrayCastTest extends TestCase
     {
         parent::setUp();
         $this->model = $this->models->random();
+
+        $this->model->update([
+            'bio' => MigrationTest::getBio(),
+        ]);
     }
 
     /** @test */
     public function attribute_is_mutated_correctly()
     {
-        $this->model->update([
-            'favorites' => [1, 2, 3],
-        ]);
-
         $this->assertEquals(
-            [1, 2, 3],
-            $this->model->favorites
+            $this->model->getRawOriginal('bio'),
+            MigrationTest::getBio()
         );
     }
 
     /** @test */
     public function attribute_is_accessed_correctly()
     {
-        $this->model->update([
-            'favorites' => [],
-        ]);
-
         $this->assertEquals(
-            [],
-            $this->model->favorites
+            nl2br(MigrationTest::getBio()),
+            $this->model->bio
         );
     }
 }
