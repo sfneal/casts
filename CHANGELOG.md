@@ -64,3 +64,8 @@ All notable changes to `casts` will be documented in this file
 - refactor test assets into the 'Tests/Assets' namespace
 - add use of sfneal/mock-models for expanding `People` & `PeopleFactory`
 - refactor test classes into `Feature` & `Unit` namespaces
+
+
+## 2.0.0 - 2024-04-15
+- cut support for php7.4
+- add support for php 8.1, 8.2 & 8.3
