@@ -46,7 +46,7 @@ class People extends \Sfneal\Testing\Models\People
     /**
      * Retrieve the 'age' attribute.
      *
-     * @param $value
+     * @param  $value
      * @return int
      */
     public function getAgeAttribute($value): int

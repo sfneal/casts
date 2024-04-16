@@ -11,7 +11,7 @@ class NullableIntArrayCast extends CustomCastBase
      *
      *  - set to null if an empty array or null value is passed
      *
-     * @param $value
+     * @param  $value
      * @return string
      */
     public function setAttribute($value): ?string
@@ -22,7 +22,7 @@ class NullableIntArrayCast extends CustomCastBase
     /**
      * Retrieve an array of values.
      *
-     * @param $value
+     * @param  $value
      * @return array
      */
     public function castAttribute($value): ?array

@@ -41,7 +41,7 @@ class MigrationTest extends TestCase
         $this->assertSame($newPerson->name_first, 'Johnny');
         $this->assertSame($newPerson->name_last, 'Tsunami');
         $this->assertSame($newPerson->email, 'johnny.tsunami@example.com');
-        $this->assertEquals($newPerson->birthday, (new Carbon(\DateTime::createFromFormat('m-d-Y', '11-27-1995'))));
+        $this->assertEquals($newPerson->birthday, new Carbon(\DateTime::createFromFormat('m-d-Y', '11-27-1995')));
         $this->assertSame($newPerson->bio, nl2br(self::getBio()));
         $this->assertSame($newPerson->favorites, [1, 2, 3]);
     }

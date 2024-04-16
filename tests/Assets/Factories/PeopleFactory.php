@@ -17,6 +17,7 @@ class PeopleFactory extends \Database\Factories\PeopleFactory
      * Define the model's default state.
      *
      * @return array
+     *
      * @throws \Exception
      */
     public function definition(): array

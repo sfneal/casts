@@ -12,7 +12,7 @@ class CarbonCast extends CustomCastBase
     /**
      * Store value as time code string.
      *
-     * @param mixed $value
+     * @param  mixed  $value
      * @return DateTime
      */
     public function setAttribute($value): ?DateTime
@@ -23,8 +23,9 @@ class CarbonCast extends CustomCastBase
     /**
      * Retrieve value as Carbon instance.
      *
-     * @param mixed $value
+     * @param  mixed  $value
      * @return Carbon
+     *
      * @throws Exception
      */
     public function castAttribute($value): ?Carbon
