@@ -9,7 +9,7 @@ class NewlineCast extends CustomCastBase
     /**
      * Transcode newline characters as html <br> chars.
      *
-     * @param mixed $value
+     * @param  mixed  $value
      * @return string
      */
     public function setAttribute($value): ?string
@@ -20,7 +20,7 @@ class NewlineCast extends CustomCastBase
     /**
      * Transcode newline characters as html <br> chars.
      *
-     * @param mixed $value
+     * @param  mixed  $value
      * @return string
      */
     public function castAttribute($value): ?string
