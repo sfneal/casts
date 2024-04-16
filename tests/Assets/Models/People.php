@@ -36,9 +36,9 @@ class People extends \Sfneal\Testing\Models\People
     /**
      * Model Factory.
      *
-     * @return PeopleFactory
+     * @return \Database\Factories\PeopleFactory
      */
-    protected static function newFactory(): PeopleFactory
+    protected static function newFactory(): \Database\Factories\PeopleFactory
     {
         return new PeopleFactory();
     }
